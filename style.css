@@ -1,0 +1,192 @@
+/* RESETS */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* GENERAL */
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: "Poppins";
+  font-size: 15px;
+  background-color: var(--very-light-gray);
+}
+
+.container {
+  min-width: 375px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 4em 0;
+  text-align: center;
+}
+
+.container main {
+  text-align: initial;
+}
+
+header {
+  width: max(311px, min(510px, 80%));
+  margin: 0 auto;
+  margin-bottom: 5em;
+}
+
+.heading {
+  width: 311px;
+  margin: 0 auto;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: var(--very-dark-blue);
+  margin-bottom: 0.6667em;
+  text-align: center;
+}
+.bold {
+  font-weight: 500;
+}
+
+p {
+  color: var(--grayish-blue);
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+.cards,
+.cards__middle {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.card {
+  width: 311px;
+  height: 222px;
+  margin: 0 auto;
+  padding: 1.5em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  box-shadow: 0px 6px 15px 1px rgba(0, 0, 0, 0.36);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #fff;
+}
+
+.c__left {
+  border-top: 3px solid var(--cyan);
+}
+
+.c__middle__first {
+  border-top: 3px solid var(--red);
+}
+
+.c__middle__second {
+  border-top: 3px solid var(--orange);
+}
+
+.c__right {
+  border-top: 3px solid var(--blue);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--very-light-gray);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--very-light-gray);
+}
+
+.card__heading {
+  font-size: 1.25em;
+  font-weight: 500;
+  margin-bottom: 0.3em;
+}
+
+.card__text {
+  font-size: 0.8125rem;
+  width: 95%;
+}
+
+.card__icon {
+  position: absolute;
+  bottom: 1.5em;
+  right: 1.5em;
+}
+
+.attribution {
+  margin: 3em;
+}
+
+@media (min-width: 900px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .c__left {
+    margin: 0;
+  }
+  .c__right {
+    margin: 0;
+  }
+  .cards,
+  .cards__middle {
+    gap: 2em;
+  }
+}
